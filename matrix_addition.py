@@ -21,8 +21,8 @@ print(f"Enter {m} rows with {n} elements in each row for matrix1")
 matrix1 = []
 for i in range(m):
     row = list(map(int, input(f'Enter {n} elements(space separated) row {i+1}:').split()))
-    if len(row) != n:
-        row = list(map(int, input(f'Enter row {i + 1} again with {n} elements:').split()))
+    while len(row) != n:
+        row = list(map(int, input(f'Enter row {i + 1} again, with {n} elements:').split()))
     matrix1.append(row)
 
 # Enter 2nd matrix
@@ -30,8 +30,8 @@ print(f"Enter {m} rows with {n} elements in each row for matrix2")
 matrix2 = []
 for i in range(m):
     row = list(map(int, input(f'Enter {n} elements(space separated) row {i+1}:').split()))
-    if len(row) != n:
-        row = list(map(int, input(f'Enter row {i + 1} again with {n} elements:').split()))
+    while len(row) != n:
+        row = list(map(int, input(f'Enter row {i + 1} again, with {n} elements:').split()))
     matrix2.append(row)
 
 # printing both the matrices

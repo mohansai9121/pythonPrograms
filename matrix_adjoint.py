@@ -70,7 +70,7 @@ def cofactor(mat):
 matrix = []
 for i in range(m):
     elements = list(map(int, input(f"Enter {m} elements, Row{i+1}:").split()))
-    if len(elements) != m:
+    while len(elements) != m:
         elements = list(map(int, input(f"Again enter row{i+1} with exactly {m} values:")))
     matrix.append(elements)
 matrix = transpose(cofactor(matrix))

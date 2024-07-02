@@ -25,7 +25,7 @@ try:
     matrix1 = []
     for i in range(m):
         elements = list(map(int, input(f"Enter {n} elements,row{i + 1}:").split()))
-        if len(elements) != n:
+        while len(elements) != n:
             elements = list(map(int, input(f"Again enter row{i+1} with exactly {n} numbers:")))
         matrix1.append(elements)
 
@@ -37,7 +37,7 @@ try:
     matrix2 = []
     for i in range(x):
         elements = list(map(int, input(f"Enter {y} elements,row{i + 1}:").split()))
-        if len(elements) != y:
+        while len(elements) != y:
             elements = list(map(int, input(f"Again enter row{i+1} with exactly {y} numbers:")))
         matrix2.append(elements)
 

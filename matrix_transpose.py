@@ -21,7 +21,7 @@ try:
     matrix = []
     for i in range(m):
         elements = list(map(int, input(f"Enter {n} elements, Row{i + 1}:").split()))
-        if len(elements) != n:
+        while len(elements) != n:
             elements = list(map(int, input(f"Again enter row{i} with exactly {n} space separated values:")))
         matrix.append(elements)
     print("Printing the matrix:")
